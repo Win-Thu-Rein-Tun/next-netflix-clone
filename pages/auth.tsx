@@ -5,6 +5,9 @@ const Auth = () => {
         <nav className="px-12 py-5">
           <img src="/images/logo.png" className="h-12" alt="Logo" />
         </nav>
+        <div className="flex justify-center">
+          <div className="bg-black">Sign in</div>
+        </div>
       </div>
     </div>
   );
