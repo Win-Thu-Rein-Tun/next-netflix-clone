@@ -1,17 +1,17 @@
 import React, { useCallback } from 'react';
-import { InformationCircleIcon } from '@heroicons/react/24/outline';
+import { AiOutlineInfoCircle } from 'react-icons/ai';
 
-import PlayButton from '@/components/PlayButton';
+// import PlayButton from '@/components/PlayButton';
 import useBillboard from '@/hooks/useBillboard';
-import useInfoModalStore from '@/hooks/useInfoModalStore';
+// import useInfoModalStore from '@/hooks/useInfoModalStore';
 
 const Billboard: React.FC = () => {
-  const { openModal } = useInfoModalStore();
   const { data } = useBillboard();
+  // const { openModal } = useInfoModalStore();
 
-  const handleOpenModal = useCallback(() => {
-    openModal(data?.id);
-  }, [openModal, data?.id]);
+  // const handleOpenModal = useCallback(() => {
+  //   openModal(data?.id);
+  // }, [openModal, data?.id]);
 
 
 
@@ -26,9 +26,9 @@ const Billboard: React.FC = () => {
           {data?.description}
         </p>
         <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
-          <PlayButton movieId={data?.id} />
+          {/* <PlayButton movieId={data?.id} /> */}
           <button
-            onClick={handleOpenModal}
+            // onClick={handleOpenModal}
             className="
             bg-white
             text-white
@@ -46,7 +46,7 @@ const Billboard: React.FC = () => {
               transition
             "
             >
-              <InformationCircleIcon className="w-4 md:w-7 mr-1" />
+              <AiOutlineInfoCircle className="w-4 md:w-7 mr-1" />
               More Info
           </button>
         </div>
