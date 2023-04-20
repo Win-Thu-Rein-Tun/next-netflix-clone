@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarItem from "./NavbarItem";
 import { BsChevronDown } from "react-icons/bs";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   return (
