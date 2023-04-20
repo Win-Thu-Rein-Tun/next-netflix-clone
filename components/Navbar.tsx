@@ -8,9 +8,14 @@ import { BsChevronDown, BsBell, BsSearch } from "react-icons/bs";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showAccountMenu, setShowAccountMenu] = useState(false);
 
   const toggleMenu = useCallback(() => {
     setShowMobileMenu((current) => !current);
+  }, []);
+
+  const toggleAccountMenu = useCallback(() => {
+    setShowAccountMenu((current) => !current);
   }, []);
 
   return (
@@ -30,7 +35,7 @@ const Navbar = () => {
           className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative"
         >
           <p className="text-white text-sm">Browse</p>
-          <BsChevronDown className={`w-4 text-white fill-white transition `} />
+          <BsChevronDown className={`w-4 text-white fill-white transition ${showMobileMenu ? 'rotate-180' : 'rotate-0'}`} />
           <MobileMenu visible={showMobileMenu} />
         </div>
         <div className="flex flex-row ml-auto gap-7 items-center">
@@ -40,12 +45,12 @@ const Navbar = () => {
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
             <BsBell className="w-6" />
           </div>
-          <div className="flex flex-row items-center gap-2 cursor-pointer relative">
+          <div onClick={toggleAccountMenu} className="flex flex-row items-center gap-2 cursor-pointer relative">
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
               <img src="/images/default-blue.png" alt="profile" />
             </div>
-            <BsChevronDown className={`w-4 text-white fill-white transition`} />
-            <AccountMenu />
+            <BsChevronDown className={`w-4 text-white fill-white transition ${showAccountMenu ? 'rotate-180' : 'rotate-0'}`} />
+            <AccountMenu visible={showAccountMenu}/>
           </div>
         </div>
       </div>
