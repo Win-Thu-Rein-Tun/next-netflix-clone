@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import { NextPageContext } from "next";
-import { getSession} from "next-auth/react";
+import { getSession } from "next-auth/react";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -22,7 +22,30 @@ export async function getServerSideProps(context: NextPageContext) {
 export default function Home() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
+      <div className="bg-gray-500">
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+        <div className="h-96"></div>
+      </div>
     </>
   );
 }
