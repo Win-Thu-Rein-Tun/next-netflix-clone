@@ -1,4 +1,6 @@
+import Billboard from "@/components/Billboard";
 import Navbar from "@/components/Navbar";
+
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 
@@ -23,29 +25,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-500">
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-      </div>
+      <Billboard />
     </>
   );
 }
