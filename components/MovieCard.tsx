@@ -7,7 +7,7 @@ import { BsFillPlayFill } from 'react-icons/bs';
 // import useInfoModalStore from '@/hooks/useInfoModalStore';
 
 interface MovieCardProps {
-  data: Record<string, any>[];
+  data: Record<string, any>;
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
@@ -18,7 +18,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
 
   return (
     <div className="group bg-zinc-900 col-span relative h-[12vw]">
-      <img onClick={redirectToWatch} src={data.thumbnailUrl} alt="Movie" draggable={false} className="
+      <img alt="Movie" draggable={false} className="
         cursor-pointer
         object-cover
         transition
@@ -48,7 +48,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         group-hover:translate-x-[2vw]
         group-hover:opacity-100
       ">
-        <img onClick={redirectToWatch} src={data.thumbnailUrl} alt="Movie" draggable={false} className="
+        <img alt="Movie" draggable={false} className="
           cursor-pointer
           object-cover
           transition
@@ -70,7 +70,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           rounded-b-md
           ">
           <div className="flex flex-row items-center gap-3">
-            <div onClick={redirectToWatch} className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-white rounded-full flex justify-center items-center transition hover:bg-neutral-300">
+            <div className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-white rounded-full flex justify-center items-center transition hover:bg-neutral-300">
               <BsFillPlayFill className="text-black w-4 lg:w-6" />
             </div>
             {/* <FavoriteButton movieId={data.id} />
