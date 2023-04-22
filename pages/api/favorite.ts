@@ -9,6 +9,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (req.method === 'POST') {
       const { currentUser } = await serverAuth(req);
 
+      console.log(currentUser)
+
       const { movieId } = req.body;
   
       const existingMovie = await prismadb.movie.findUnique({
