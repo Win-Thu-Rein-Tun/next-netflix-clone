@@ -1,3 +1,5 @@
+const { error } = require("console");
+
 // Task 1
 function logDairy() {
   for (var product of dairy) {
@@ -7,6 +9,7 @@ function logDairy() {
 
 logDairy();
 
+error.log("still error")
 // Task 2
 const animal = {
   canJump: true,
