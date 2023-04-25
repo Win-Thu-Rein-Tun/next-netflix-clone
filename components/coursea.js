@@ -7,7 +7,7 @@ function logDairy() {
   }
 }
 
-logDairy();
+logDairy(Busy);
 
 error.log("still error")
 // Task 2
